@@ -18,33 +18,43 @@
     </head>
     <body>
         <div class="input card">
-            <form method="post">
-                <label for="username">Enter your name:</label>
+            <form method="post" name="formHello" onsubmit="return validateForm()">
+                <label for="username">Enter your name: (Name must contain only letters)</label>
                 <input
                     type="text"
                     name="username"
                     id="username"
                     value="{{ request.form['username'] }}"
+                    required
+                    minlength="1" maxlength="25"
                 />
-                <label for="usersurname">Enter your surname:</label>
+                <label for="usersurname">Enter your surname: (Surname must contain only letters)</label>
                 <input
                     type="text"
                     name="usersurname"
                     id="usersurname"
                     value="{{ request.form['usersurname'] }}"
+                    required
+                    minlength="1" maxlength="25"
                 />
-                <label for="useremail">Enter your email address:</label>
+                <label for="useremail">Enter your email address: (Email must be 6 or more characters long)</label>
                 <input
                     type="email"
                     name="useremail"
                     id="useremail"
                     value="{{ request.form['email'] }}"
+                    required
+                    minlength="6" maxlength="35"
                 />
+                <p class="message" id="message"></p>
                 <button type="submit" class="button">Say Hello!</button>
             </form>
-            <form action="{{ url_for('users') }}" method="get">
+            <form action="{{ url_for('users') }}" method="get" name="formUsers">
                 <button type="submit" class="button">Show user list</button>
             </form>
         </div>
+
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+        
     </body>
 </html>

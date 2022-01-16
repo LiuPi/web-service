@@ -41,6 +41,14 @@ body {
     border-color: thistle;
 }
 
+input:invalid {
+    border: 1px solid rgb(238, 143, 143);
+  }
+  
+  input:valid {
+    border: 1px solid mediumpurple;
+  }
+
 .card {
     background: lightsteelblue;
     box-shadow: 0 2px 12px mediumpurple;
@@ -88,4 +96,8 @@ button:active {
     max-width: 70%;
     background: rgb(238, 201, 238);
     box-shadow: 0 2px 2px darkmagenta;
+}
+
+.message {
+    color: red;
 }
