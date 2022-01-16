@@ -33,7 +33,7 @@ def index():
         useremail = request.form['useremail']
 
         conn = get_db_connection()
-        user = conn.execute("SELECT rowid FROM users WHERE username = ?", (username,)).fetchall()
+        user = conn.execute("SELECT rowid FROM users WHERE (username = ? AND usersurname = ?)", (username, usersurname)).fetchall()
         
         if len(user) == 0:
 
@@ -41,10 +41,10 @@ def index():
             conn.commit()
             conn.close()
 
-            return render_template('hello.html', message="Hello, ", name=username)
+            return render_template('hello.html', message="Hello, ", name=username, surname=usersurname)
         else:
             conn.close()
-            return render_template('hello.html', message="Already seen you, ", name=username)
+            return render_template('hello.html', message="Already seen you, ", name=username, surname=usersurname)
 
     return render_template('index.html')
 
