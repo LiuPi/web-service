@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <title>Web Server</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}"
+        />
+        <link
+            rel="shortcut icon"
+            href="{{ url_for('static', filename='cat.ico') }}"
+        />
+    </head>
+    <body>
+        <div class="input card">
+            <form method="post">
+                <label for="username">Enter your name:</label>
+                <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    value="{{ request.form['username'] }}"
+                />
+                <label for="usersurname">Enter your surname:</label>
+                <input
+                    type="text"
+                    name="usersurname"
+                    id="usersurname"
+                    value="{{ request.form['usersurname'] }}"
+                />
+                <label for="useremail">Enter your email address:</label>
+                <input
+                    type="email"
+                    name="useremail"
+                    id="useremail"
+                    value="{{ request.form['email'] }}"
+                />
+                <button type="submit" class="button">Say Hello!</button>
+            </form>
+            <form action="{{ url_for('users') }}" method="get">
+                <button type="submit" class="button">Show user list</button>
+            </form>
+        </div>
+    </body>
+</html>

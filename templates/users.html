@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Show users</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='style.css') }}"
+        />
+        <link rel="shortcut icon" href="{{ url_for('static', filename='cat.ico') }}">
+    </head>
+    <body>
+        <h1 class="input">List of users:</h2>
+        {% for user in users %}
+            <div class="users">
+                User name: <b>{{ user.username }},</b> User surname: <b>{{ user.usersurname }},</b> Email: <b>{{ user.useremail }}</b>
+            </div>
+        {% endfor %}
+    </body>
+</html>
