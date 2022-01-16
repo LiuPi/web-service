@@ -16,6 +16,8 @@
             <div class="users">
                 User name: <b>{{ user.username }},</b> User surname: <b>{{ user.usersurname }},</b> Email: <b>{{ user.useremail }}</b>
             </div>
+        {% else %}                      
+            <div class="users">The user list is empty</div>
         {% endfor %}
     </body>
 </html>
