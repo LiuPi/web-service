@@ -1,4 +1,4 @@
-# web-service
+# Say Hello
 ### Web Service "Say Hello!"
 ###### On the main page there is a form with "User name", "User surname" and "User email" fields. Also there are "Say Hello!" and "Show user list" buttons.
 ###### "User name" and "User surname" fields are the key values for checking in the database.
