@@ -7,6 +7,4 @@
 the "Already seen you, User name + User surname" message is displayed.
   When "Show user list" button is pressed, the user list is displayed. If the database with users data is empty, the "The user list is empty" message is displayed.
 
-### Production deployment
-[Link to Heroku](https://say-hello-to-user.herokuapp.com/) 
   
