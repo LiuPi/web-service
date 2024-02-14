@@ -7,4 +7,6 @@
 the "Already seen you, User name + User surname" message is displayed.
   When "Show user list" button is pressed, the user list is displayed. If the database with users data is empty, the "The user list is empty" message is displayed.
 
+  [Link to Web Service "Say Hello!"](https://liupi.eu.pythonanywhere.com/)
+
   
